@@ -8,6 +8,7 @@ describe('Sample test', () => {
         testSpy();
         expect(testSpy.calledOnce).toEqual(true);
 
+        // This line utlizes the import, which throws an error in whatwg-url v8.2.0+.
         const url = serializeURL(parseURL('http://google.com/'));
         expect(true);
     });
